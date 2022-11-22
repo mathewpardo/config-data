@@ -33,6 +33,10 @@ spring:
           uri: lb://reloj-service
           predicates:
             - Path=/clock/**
+	 - id: reloj-service
+          uri: lb://reloj-service
+          predicates:
+            - Path=/schedules/**
         - id: planilla-service
           uri: lb://planilla-service
           predicates:
